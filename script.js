@@ -1,11 +1,16 @@
-const darkModeBtn = document.getElementById("dark-mode");
-const lightModeBtn = document.getElementById("light-mode");
-const body = document.body;
+// Toggle sections visibility
+const burgerButton = document.getElementById('burger-menu');
+const sectionToggles = document.querySelectorAll('.section-toggle');
 
-darkModeBtn.addEventListener("click", () => {
-  body.classList.add("dark-mode");
+burgerButton.addEventListener('click', () => {
+    sectionToggles.forEach(section => {
+        section.classList.toggle('visible');
+    });
 });
 
-lightModeBtn.addEventListener("click", () => {
-  body.classList.remove("dark-mode");
+// Theme switching
+const themeButton = document.getElementById('theme-switch');
+
+themeButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
 });
