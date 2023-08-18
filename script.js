@@ -1,15 +1,12 @@
-// Toggle sections visibility
 const burgerButton = document.getElementById('burger-menu');
 const sectionToggles = document.querySelectorAll('.section-toggle');
+const themeButton = document.getElementById('theme-switch');
 
 burgerButton.addEventListener('click', () => {
     sectionToggles.forEach(section => {
-        section.classList.toggle('visible');
+        section.closest('section').classList.toggle('visible');
     });
 });
-
-// Theme switching
-const themeButton = document.getElementById('theme-switch');
 
 themeButton.addEventListener('click', () => {
     document.body.classList.toggle('dark-theme');
