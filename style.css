@@ -1,38 +1,48 @@
-/* Reset some default styling */
-body, h1, h2, p {
-    margin: 0;
-    padding: 0;
-}
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f2f5;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-header {
-    background-color: #0073b1;
-    color: white;
-    padding: 1rem;
-    text-align: center;
+/* ... Previous styles ... */
+
+.section-content {
+    display: none;
+    padding-top: 1rem;
 }
 
-.profile-header h1 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.profile-header p {
+.section-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
     font-size: 1rem;
-    opacity: 0.8;
+    color: #0a66c2;
 }
 
-main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-    background-color: white;
+.section-toggle:focus {
+    outline: none;
+}
+
+.visible .section-content {
+    display: block;
+}
+
+.theme-button {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Style sections, headings, and content as needed */
+.dark-theme {
+    background-color: #333;
+    color: white;
+}
+
+/* ... Other styles ... */
